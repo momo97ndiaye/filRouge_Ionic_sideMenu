@@ -1,0 +1,7 @@
+{
+  "name": "filRouge_Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
