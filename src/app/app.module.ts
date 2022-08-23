@@ -1,3 +1,10 @@
+import { SharedDirectivesModule } from './directives/shared-directives.module';
+import { CatalogueRoutingModule } from './catalogue/catalogue-routing.module';
+import { CatalogueModule } from './catalogue/catalogue.module';
+import { DetailsPageModule } from './catalogue/details/details.module';
+import { DetailsPageRoutingModule } from './catalogue/details/details-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CatalogueComponent } from './catalogue/catalogue.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -6,10 +13,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent,CatalogueComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,BrowserModule,FormsModule,DetailsPageModule,CatalogueModule,CatalogueRoutingModule,DetailsPageRoutingModule,SharedDirectivesModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content appParallaxHeader [scrollEvents]="true">
+ <div class="para-image" [style.background-image]="'url('+img+')'"></div>
+<h1 class="text-light mt-2 text-center">Menus</h1>
+<div class="container">
+   
+    <ion-card *ngFor="let menu of menus" class="col-md-3">
+      <ion-card-header>
+        <ion-card-title>{{menu.nom}}</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <img class="card-img-top" [src]="transformAll(menu.image)" alt="..." />
+      </ion-card-content>
+
+      <ion-footer>
+        <h1>{{menu.prix}}</h1>
+      </ion-footer>
+ 
+<ion-button color="dark" fill="outline">Détails</ion-button>
+    </ion-card>
+</div> 
+
+
+<h1 class="text-light mt-2 text-center">Burgers</h1>
+<div class="container">
+  <ion-card *ngFor="let burger of burgers" class="col-md-3">
+      <ion-card-header>
+        <ion-card-title>{{burger.nom}}</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <img class="card-img-top" [src]="transformAll(burger.image)" alt="..." />
+      </ion-card-content>
+
+      <ion-footer>
+        <h1>{{burger.prix}}</h1>
+      </ion-footer>
+
+      <ion-button color="primary" fill="outline">Ajouter au Panier</ion-button>
+      <ion-button color="dark" fill="outline">Détails</ion-button>
+    </ion-card>
+</div> 
+
+
+</ion-content>

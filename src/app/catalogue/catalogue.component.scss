@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.para-image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+/* .image{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+} */
