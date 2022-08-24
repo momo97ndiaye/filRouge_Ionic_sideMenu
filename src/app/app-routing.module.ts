@@ -6,7 +6,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'catalogue',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -20,8 +20,12 @@ const routes: Routes = [
     path:'admin',component:AdminComponent
   },
   {
-    path: 'details',
+    path: 'catalogue/details/:id',
     loadChildren: () => import('./catalogue/details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
 ];
 

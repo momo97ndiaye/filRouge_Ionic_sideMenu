@@ -1,3 +1,4 @@
+import { HomePageModule } from './home/home.module';
 import { SharedDirectivesModule } from './directives/shared-directives.module';
 import { CatalogueRoutingModule } from './catalogue/catalogue-routing.module';
 import { CatalogueModule } from './catalogue/catalogue.module';
@@ -14,10 +15,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { IonicHeaderParallaxModule } from 'ionic-header-parallax';
 
 @NgModule({
   declarations: [AppComponent,CatalogueComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,BrowserModule,FormsModule,DetailsPageModule,CatalogueModule,CatalogueRoutingModule,DetailsPageRoutingModule,SharedDirectivesModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,BrowserModule,FormsModule,DetailsPageModule,CatalogueModule,CatalogueRoutingModule,SharedDirectivesModule,
+    IonicHeaderParallaxModule,HomePageModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

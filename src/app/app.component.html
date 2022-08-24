@@ -1,4 +1,4 @@
-<ion-app>
+<!-- <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
@@ -26,3 +26,35 @@
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
+ -->
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+  </style>
+
+<ion-content padding id="welcome" [fullscreen]="true">
+  <ion-slides>
+<ion-slide>
+  <div class="container">
+    <h1 class="text-center"> Welcome to Brazil Burger </h1>
+    <img src="https://img.freepik.com/vecteurs-premium/burger-logo-vector-art-design_260747-248.jpg?w=2000" class="logo"/>
+    <div>Discover some intersting things</div>
+    <div class="foot">
+      <button ion-button block class="marginTop">Se Connecter</button>
+      <button ion-button block color="lightprimary">S'inscrire</button>
+    </div>
+  </div>
+</ion-slide>
+  <ion-slide>
+    <div class="slide">
+      <img src="./slide-1.png" />
+      <h2>Welcome</h2>
+      <p>
+        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a
+        demonstration of proper code use.
+      </p>
+    </div>
+  </ion-slide>
+</ion-slides>
+
+</ion-content>
+  

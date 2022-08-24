@@ -15,6 +15,7 @@ export class CatalogueComponent implements OnInit {
   public folder: string;
   burgers: any;
   menus: any;
+  select:any="grid"
   
   constructor(private activatedRoute: ActivatedRoute,private catalogueService:CatalogueService,private sanitizer: DomSanitizer) { }
 
@@ -34,4 +35,8 @@ export class CatalogueComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl('data:image/png;base64, '+params);
   }
 
+  segmentChanged(event){
+    this.select=event.target.value
+    console.log(this.select)
+  }
 }
