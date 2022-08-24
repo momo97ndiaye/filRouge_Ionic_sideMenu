@@ -4,6 +4,105 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
+<!-- <ion-content>
+  <ion-menu contentId="main-content" type="overlay">
+    <ion-content id="welcome">
+      <ion-list id="inbox-list">
+        <ion-list-header>Brazil Burger</ion-list-header>
+        <ion-note>brazil.burger@gmail.com</ion-note>
+
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+          <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+            <ion-label>{{ p.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+
+      <ion-list id="labels-list">
+        <ion-list-header>Labels</ion-list-header>
+        <ion-item *ngFor="let label of labels" lines="none">
+          <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+          <ion-label>{{ label }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ion-content> -->
+<ion-content padding id="welcome">
+  <ion-slides [pager]="true">
+    <ion-slide>
+      <div class="container">
+        <h1 class="text-center">Welcome to Brazil Burger</h1>
+        <img
+          src="https://img.freepik.com/vecteurs-premium/burger-logo-vector-art-design_260747-248.jpg?w=2000"
+          class="logo"
+        />
+        <div>Discover some intersting things</div>
+        <div class="foot">
+          <button ion-button block class="marginTop">Se Connecter</button>
+          <button ion-button block color="lightprimary">S'inscrire</button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img
+          src="https://img.freepik.com/vecteurs-premium/burger-logo-vector-art-design_260747-248.jpg?w=2000"
+          class="logo"
+        />
+        <ion-row class="logo-row">
+          <ion-col>
+            <ion-title align="center"> Welcome To Brazil Burger </ion-title>
+          </ion-col>
+        </ion-row>
+
+        <ion-card>
+          <div class="login-box">
+            <form #loginForm="ngForm">
+              <ion-row>
+                <ion-col>
+                  <ion-list inset>
+                    <ion-item>
+                      <ion-input
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                      ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-input
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                      ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-label>Remember Me</ion-label>
+                      <ion-checkbox checked="true"></ion-checkbox>
+                    </ion-item>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col class="signup-col">
+                  <ion-button
+                    class="submit-btn"
+                    full
+                    type="submit"
+                    [routerLink]="['/catalogue']"
+                  >
+                    Login
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </form>
+          </div>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

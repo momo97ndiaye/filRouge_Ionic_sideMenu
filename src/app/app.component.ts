@@ -10,6 +10,7 @@ export class AppComponent {
     { title: 'Catalogue', url: '/catalogue', icon: 'restaurant' },
     { title: 'Livraisons', url: '/folder/Livraisons', icon: 'archive' },
     { title: 'Connexion', url: '/folder/Connexion', icon: 'log-in' },
+    { title: 'Home', url: '/home', icon: 'log-in' },
   ];
   public labels = [/* 'Sign In', 'Mes commandes', 'Panier', 'Catalogue' */];
   constructor() {}

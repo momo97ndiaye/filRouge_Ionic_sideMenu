@@ -18,7 +18,13 @@ export class CatalogueComponent implements OnInit {
   select:any="grid"
   
   constructor(private activatedRoute: ActivatedRoute,private catalogueService:CatalogueService,private sanitizer: DomSanitizer) { }
-
+  public appPages = [
+    { title: 'Admin', url: '/admin', icon: 'person' },
+    { title: 'Catalogue', url: '/catalogue', icon: 'restaurant' },
+    { title: 'Livraisons', url: '/folder/Livraisons', icon: 'archive' },
+    { title: 'Connexion', url: '/folder/Connexion', icon: 'log-in' },
+  ];
+  public labels = [/* 'Sign In', 'Mes commandes', 'Panier', 'Catalogue' */];
   ngOnInit() {
     this.folder = "Catalogue";
     const observable:Observable<any> = this.catalogueService.getCatalogueObs();

@@ -1,7 +1,7 @@
-<!-- <ion-app>
+<!--  <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
+      <ion-content id="welcome">
         <ion-list id="inbox-list">
           <ion-list-header>Brazil Burger</ion-list-header>
           <ion-note>brazil.burger@gmail.com</ion-note>
@@ -25,36 +25,112 @@
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
-</ion-app>
- -->
- <style>
-  @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-  </style>
+</ion-app> -->
 
-<ion-content padding id="welcome" [fullscreen]="true">
-  <ion-slides>
-<ion-slide>
-  <div class="container">
-    <h1 class="text-center"> Welcome to Brazil Burger </h1>
-    <img src="https://img.freepik.com/vecteurs-premium/burger-logo-vector-art-design_260747-248.jpg?w=2000" class="logo"/>
-    <div>Discover some intersting things</div>
-    <div class="foot">
-      <button ion-button block class="marginTop">Se Connecter</button>
-      <button ion-button block color="lightprimary">S'inscrire</button>
-    </div>
-  </div>
-</ion-slide>
-  <ion-slide>
-    <div class="slide">
-      <img src="./slide-1.png" />
-      <h2>Welcome</h2>
-      <p>
-        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a
-        demonstration of proper code use.
-      </p>
-    </div>
-  </ion-slide>
-</ion-slides>
+<!--   <ion-content padding id="welcome">
 
-</ion-content>
   
+    <ion-slides [pager]="true">
+    <ion-slide>
+      <div class="container">
+        <h1 class="text-center">Welcome to Brazil Burger</h1>
+        <img
+          src="https://img.freepik.com/vecteurs-premium/burger-logo-vector-art-design_260747-248.jpg?w=2000"
+          class="logo"
+        />
+        <div>Discover some intersting things</div>
+        <div class="foot">
+          <button ion-button block class="marginTop">Se Connecter</button>
+          <button ion-button block color="lightprimary">S'inscrire</button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img
+          src="https://img.freepik.com/vecteurs-premium/burger-logo-vector-art-design_260747-248.jpg?w=2000"
+          class="logo"
+        />
+        <ion-row class="logo-row">
+          <ion-col>
+            <ion-title align="center"> Welcome To Brazil Burger </ion-title>
+          </ion-col>
+        </ion-row>
+
+        <ion-card>
+          <div class="login-box">
+            <form #loginForm="ngForm">
+              <ion-row>
+                <ion-col>
+                  <ion-list inset>
+                    <ion-item>
+                      <ion-input
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                      ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-input
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                      ></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                      <ion-label>Remember Me</ion-label>
+                      <ion-checkbox checked="true"></ion-checkbox>
+                    </ion-item>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col class="signup-col">
+                  <button
+                    ion-button
+                    class="submit-btn"
+                    full
+                    type="submit"
+                    [disabled]="!loginForm.form.valid"
+                    [routerLink]="['/catalogue']"
+                  >
+                    Login
+                  </button>
+                </ion-col>
+              </ion-row>
+            </form>
+          </div>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content> -->
+
+<ion-app>
+
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="secondary">
+          <ion-title>Brazil Burger</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>Nos Menus</ion-item>
+          <ion-item>Nos Burgers</ion-item>
+          <ion-item>Nos Compléments</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main">
+      <ion-content class="ion-padding">
+        <ion-menu-toggle>
+          <ion-button>Toggle Menu</ion-button>
+        </ion-menu-toggle>
+      </ion-content>
+    </div>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-app>
